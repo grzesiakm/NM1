@@ -73,5 +73,11 @@ int main() {
 	fclose(f2);
 	fclose(f3);
 
+	free(fm);
+	free(ym);
+	free(fmRowne);
+	free(xmRowne);
+	free(ymRowne);
+
 	return 0;	
 }
