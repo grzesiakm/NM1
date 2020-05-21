@@ -52,10 +52,10 @@ int main() {
 	}
 
 	four1(f, N, -1);
-        float max = abs(f[1]);
+        float max = fabs(f[1]);
 
         for(int i = 2; i <= N; i++) {
-            max = MAX(abs(max), abs(f[2 * i - 1]));
+            max = MAX(fabs(max), fabs(f[2 * i - 1]));
         }
 
         for(int j = 1; j <= N; j++) {
