@@ -45,7 +45,7 @@ void Romberg(double** D, int n, double a, double b, double (*f)(double)) {
 
     for (int i = 1; i <= n; i++) {
         for (int w = i; w <= n; w++) {
-            D[w][i] = (pow(4, i) * D[w][i - i] - D[w - 1][i - 1]) / (pow(4, i) - 1);
+            D[w][i] = (pow(4, i) * D[w][i - 1] - D[w - 1][i - 1]) / (pow(4, i) - 1);
         }
     }
 }
