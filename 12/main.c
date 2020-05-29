@@ -64,9 +64,9 @@ int main() {
         double** D = dmatrix(0, n[i], 0, n[i]);
         Romberg(D, n[i], a[i], 1.0, f[i]);
 
-        fprintf(files[i], "%s %15s %15s\n", "w", "D[w][0]", "D[w][w]");
+        fprintf(files[i], "%s %10s %15s\n", "w", "D[w][0]", "D[w][w]");
         for (int j = 0; j <= n[i]; j++) {
-            fprintf(files[i], "%d %15f %15f\n", j, D[j][0], D[j][j]);
+            fprintf(files[i], "%d %15.10f %15.10f\n", j, D[j][0], D[j][j]);
         }
 
         fclose(files[i]);
